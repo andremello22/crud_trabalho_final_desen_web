@@ -14,7 +14,7 @@ class AuthenticationService {
 //nao foi tratado o sql inject (invasão)
 //
     $usuario = $this->db->query("SELECT * FROM usuario where email='$email' and senha='$senha'");  
-    
+   
     foreach($usuario as $linha) {
       $_SESSION['autenticado']=true;
       return true;
